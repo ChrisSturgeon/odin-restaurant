@@ -1,1 +1,4 @@
-console.log('Testing...testing...')
+import './style.css';
+import { testFunc } from './base.js';
+
+testFunc();
