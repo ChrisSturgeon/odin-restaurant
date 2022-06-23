@@ -11,7 +11,7 @@ function base() {
   // Restaurant title
   const title = document.createElement('h1');
   title.classList.add('title');
-  title.textContent = 'Must...eat...grains...';
+  title.textContent = 'Must Eat Grains';
   header.appendChild(title);
 
 

@@ -6,12 +6,14 @@ import { about } from './about.js';
 import { contact } from './contact';
 
 
+
 base();
 home();
 
 // Add Event Listeners
 
 const homeBtn = document.getElementById('home');
+homeBtn.classList.add('menuBtnSelected');
 homeBtn.addEventListener('click', home);
 homeBtn.addEventListener('click', underline);
 
@@ -39,3 +41,5 @@ function underline (event) {
   const btn = event.target;
   btn.classList.add('menuBtnSelected');
 };
+
+
