@@ -24,6 +24,7 @@ function base() {
     var option = document.createElement('button');
     option.textContent = item;
     option.setAttribute('id', `${item}`);
+    option.classList.add('menuBtn');
     headerMenu.appendChild(option);
   }
 

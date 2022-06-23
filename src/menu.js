@@ -6,6 +6,8 @@ function menu() {
   const placeholder = document.createElement('div');
   placeholder.innerText = "Menu page content here..."
   body.appendChild(placeholder);
+
+
 }
 
 export { menu }
