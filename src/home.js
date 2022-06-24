@@ -13,7 +13,7 @@ function home() {
 
   var text = "Must Eat Grains is the world's first vegan zombie restaurant. <br><br>";
   text += "We only serve ethically, locally sourced organic produce to ensure your body gets the nutrients it needs to last forever. ";
-  text += "Human flesh is available year-round but unfortunately not all vegetables are fruits are too. That's why we regularly change our menu to adapt to the seasons ";
+  text += "Human flesh is available year-round but unfortunately not all fruits and vegetables are too. That's why we regularly change our menu to adapt to the seasons ";
   text += "and use innovative cooking methods to get the most from our ingredients.";
   description.innerHTML = text;
 

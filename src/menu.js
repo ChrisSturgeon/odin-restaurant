@@ -13,8 +13,10 @@ import Mint from './images/mint.jpeg';
 import Mary from './images/mary.jpeg';
 
 
-function mainsScroll() {
-  document.getElementById('mainsTitle').scrollIntoView({behavior: 'smooth'});
+function mainsScroll(course) {
+  // document.getElementById('mainsTitle').scrollIntoView({behavior: 'smooth'});
+  var test = document.getElementById(`${course}`);
+  console.log(test);
 }
 
 
@@ -95,13 +97,29 @@ function createCard(title, imageSrc, explanation, price) {
   card.appendChild(value);
   body.appendChild(card);
 
-  document.getElementById('btnMains').addEventListener('click', mainsScroll);
+  document.getElementById('btnStarters').addEventListener('click', () => {
+    document.getElementById('starters').scrollIntoView({behavior: 'smooth'})
+  });
+
+  document.getElementById('btnMains').addEventListener('click', () => {
+    document.getElementById('mains').scrollIntoView({behavior: 'smooth'})
+  });
+
+  document.getElementById('btnDesserts').addEventListener('click', () => {
+    document.getElementById('desserts').scrollIntoView({behavior: 'smooth'})
+  });
+
+  document.getElementById('btnDrinks').addEventListener('click', () => {
+    document.getElementById('drinks').scrollIntoView({behavior: 'smooth'})
+  });
+
+
 }
 
 function createTitle(course) {
   var title = document.createElement('h2');
   title.textContent = course.slice(0, 1).toUpperCase() + course.slice(1);
-  title.setAttribute('Id', `${course}Title`);
+  title.setAttribute('Id', `${course}`);
   body.appendChild(title);
 }
 
