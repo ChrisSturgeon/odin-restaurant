@@ -136,9 +136,16 @@ body, button {
 }
 
 .card {
-	background-color: rgb(205, 205, 205);
 	display: grid;
 	grid-template-rows: repeat(4, auto);
+	text-align: center;
+	gap: 15px;
+	padding: 10px 0px;
+	border: 1px solid grey;
+	background-color: rgb(240, 240, 240);
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+	border-radius: 5px;
 }
 
 .card h1 {
@@ -146,11 +153,6 @@ body, button {
 	text-align: center;
 }
 
-.food {
-
-	background-color: red;
-	
-}
 
 .food > img {
 	height: 100%;

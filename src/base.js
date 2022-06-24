@@ -22,7 +22,7 @@ function base() {
 
   for (var item of menuItems) {
     var option = document.createElement('button');
-    option.textContent = item;
+    option.textContent = item.slice(0, 1).toUpperCase() + item.slice(1);
     option.setAttribute('id', `${item}`);
     option.classList.add('menuBtn');
     headerMenu.appendChild(option);
