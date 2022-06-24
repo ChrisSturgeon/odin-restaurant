@@ -7,7 +7,10 @@ import Tofu from './images/tofu.jpeg';
 import Cabbage from './images/cabbage.jpeg';
 import Shots from './images/shots.jpeg';
 import Moose from './images/moose.jpeg';
-import Brownies from './images/brownies.jpeg'
+import Brownies from './images/brownies.jpeg';
+import Coffee from './images/coffee.jpeg';
+import Mint from './images/mint.jpeg';
+import Mary from './images/mary.jpeg';
 
 
 function mainsScroll() {
@@ -55,7 +58,15 @@ function menu() {
 
   createCard('Moose mousse blocks', Moose, "Rescued heritage-breed moose/meese/mooses are used power our vegan-cream-whipping-machine&#8482 before its flash-frozen alongside strawberries to produce these delectable fruity blocks.", 11)
 
-  createCard('Vegan Brownies', Brownies, 'In accordance with amendment 12.8 of the 1979 UK Statue on Restaurant Puddings we are required by law to offer brownies for dessert - so here they are!', 10)
+  createCard('Vegan Brownies', Brownies, 'In accordance with amendment 12.8 of the 1979 UK Statue on Restaurant Puddings we are required by law to offer brownies for dessert - so here they are!', 10);
+
+  createTitle('drinks');
+
+  createCard('Flat-out white', Coffee, "You know the deal. Drink it and do things quickly. Made with gluten-free, lactose-negative skinny oat milk.", 2.50);
+
+  createCard('Minty Mule', Mint, "Brimmed with organic toilet-tequila from the local prison this mule packs a minty punch. Served in a glass jar with a bio-degradeable sweetcorn straw to justify the price.", 9);
+
+  createCard('Oh, Bloody Hell Mary!', Mary, "The perfect drink if you're still feeling rough from last night, or fancy feeling awful tomorrow. Juice made with vine-ripened tomatoes from our own eco-greenhouse.", 10);
 }
 
 function createCard(title, imageSrc, explanation, price) {
