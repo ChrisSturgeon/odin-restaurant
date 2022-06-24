@@ -1,5 +1,6 @@
 import Icon from './home.jpeg';
 
+
 // Creates home page body content 
 
 function home() {
