@@ -37,18 +37,18 @@ function menu() {
   }
   body.appendChild(courses);
 
-  createTitle('starter');
+  createTitle('starters');
 
   createCard('Armpit Roasted Carrots', Cow,
-   'All of our staff sleep with a carrot in each armpit everynight to produce this delicious slow-roasted starter. Served with a deconstructed orange.', 14);
-  createCard('Air-dryed bread', Bread, "We hang this bread in  the alleyway to air-dry for three weeks before serving to make sure it has our signature 'snap'. Served without butter or water.", 7);
-  createCard("Nana's Antipasto (Thursday only)", Pasta, "Every Thursday we bus in some Italian grandmothers from the nearby nursing home to hand-craft this absoutely scrumpcious dish. Drizzled with a pinenut and basil pesto.", 13)
+   'All our staff sleep with a carrot in each armpit every night to produce this delicious slow-roasted starter. Garnished with a deconstructed non-gmo orange.', 14);
+  createCard('Air-dryed bread', Bread, "We hang this bread in  the alleyway for three weeks before serving to make sure it has our signature 'snap'. Served without butter or water.", 7);
+  createCard("Nonna's Antipasto (Thursday only)", Pasta, "As part of our outreach intitative, every Thursday we bus in some Italian grandmothers from the nearby nursing home to hand-craft this absoutely scrumpcious dish. Drizzled with a pinenut and basil pesto.", 13)
   
   createTitle('mains');
 
-  createCard('Vegetable Fiesta', Icon, "The dish that started it all. Grown by local monks, these vegtables have been prayed for multiple times a day to ensure they're bursting with flavour.", 15);
+  createCard('Vegetable Fiesta', Icon, "The dish that started it all. Grown by mute monks, these vegetables have been regularly blessed to ensure they're bursting with flavour.", 15);
 
-  createCard('Tasty Tofu', Tofu, "Think tofu is proper rank? You won't after this! All the soy beans are harvested from a single plant to create the most delicate of textures.", 14);
+  createCard('Tasty Tofu', Tofu, "Think tofu is proper rank? You won't after this! All the soy beans are harvested from a single plant on the Altiplano plains in Peru to create the most delicate, uniform texture.", 14);
 
   createCard('Raw Brussels Sprouts', Cabbage, 'One for the sadists.', 5)
 
@@ -56,9 +56,9 @@ function menu() {
 
   createCard('Shots! Shots! Shots!', Shots, "Shots are always a good idea. Especially when they're a medley of classic desserts.", 9);
 
-  createCard('Moose mousse blocks', Moose, "Rescued heritage-breed moose/meese/mooses are used power our vegan-cream-whipping-machine&#8482 before its flash-frozen alongside strawberries to produce these delectable fruity blocks.", 11)
+  createCard('Moose mousse blocks', Moose, "Rescued heritage-breed moose/meese/mooses are used to power our vegan-cream-whipping-machine&#8482. We then mix the cream with dessicated strawberries before it's flash-frozen to produce these delectable, fruity blocks.", 11)
 
-  createCard('Vegan Brownies', Brownies, 'In accordance with amendment 12.8 of the 1979 UK Statue on Restaurant Puddings we are required by law to offer brownies for dessert - so here they are!', 10);
+  createCard('Vegan Brownies', Brownies, "Since amendment 12.8 to the 1979 UK Statue on Restaurant Puddings every restaurant establishment has been required by law to offer brownies for dessert - no matter how dry and uninspired they are. Here's our vegan version.", 10);
 
   createTitle('drinks');
 
@@ -66,7 +66,7 @@ function menu() {
 
   createCard('Minty Mule', Mint, "Brimmed with organic toilet-tequila from the local prison this mule packs a minty punch. Served in a glass jar with a bio-degradeable sweetcorn straw to justify the price.", 9);
 
-  createCard('Oh, Bloody Hell Mary!', Mary, "The perfect drink if you're still feeling rough from last night, or fancy feeling awful tomorrow. Juice made with vine-ripened tomatoes from our own eco-greenhouse.", 10);
+  createCard('Oh, Bloody Hell Mary!', Mary, "The perfect drink if you're still feeling rough from last night, or fancy feeling awful tomorrow. Juice made with vine-ripened tomatoes from our own greenhouse.", 10);
 }
 
 function createCard(title, imageSrc, explanation, price) {

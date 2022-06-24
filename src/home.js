@@ -1,4 +1,5 @@
-import Icon from './home.jpeg';
+import Tofu from './images/tofu.jpeg';
+
 
 
 // Creates home page body content 
@@ -10,18 +11,24 @@ function home() {
   body.classList.add('homeBody');
   const description = document.createElement('p');
 
-  var text = "Must Eat Grains is the world's first vegan zombie restaurant. <br>";
-  text += "We only serve ethically, locally sourced organic produce to ensure your body gets the nutrients it needs to last forever."
-
+  var text = "Must Eat Grains is the world's first vegan zombie restaurant. <br><br>";
+  text += "We only serve ethically, locally sourced organic produce to ensure your body gets the nutrients it needs to last forever. ";
+  text += "Human flesh is available year-round but unfortunately not all vegetables are fruits are too. That's why we regularly change our menu to adapt to the seasons ";
+  text += "and use innovative cooking methods to get the most from our ingredients.";
   description.innerHTML = text;
 
 
 
   body.appendChild(description);
 
-  const homeImage = new Image();
-  homeImage.src = Icon;
-  body.appendChild(homeImage);
+  const frame = document.createElement('div');
+  frame.classList.add('food');
+  const shot = document.createElement('img');
+  shot.src = Tofu;
+  frame.appendChild(shot);
+
+  body.appendChild(frame);
+
 
 
 
