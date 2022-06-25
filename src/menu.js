@@ -1,4 +1,3 @@
-// Show restaurant menu
 import Icon from './home.jpeg';
 import Cow from './images/roastedCarrots.jpeg';
 import Bread from './images/bread.jpeg';
@@ -11,13 +10,6 @@ import Brownies from './images/brownies.jpeg';
 import Coffee from './images/coffee.jpeg';
 import Mint from './images/mint.jpeg';
 import Mary from './images/mary.jpeg';
-
-
-function mainsScroll(course) {
-  // document.getElementById('mainsTitle').scrollIntoView({behavior: 'smooth'});
-  var test = document.getElementById(`${course}`);
-  console.log(test);
-}
 
 
 function menu() {
@@ -69,6 +61,15 @@ function menu() {
   createCard('Minty Mule', Mint, "Brimmed with organic toilet-tequila from the local prison this mule packs a minty punch. Served in a glass jar with a bio-degradeable sweetcorn straw to justify the price.", 9);
 
   createCard('Oh, Bloody Hell Mary!', Mary, "The perfect drink if you're still feeling rough from last night, or fancy feeling awful tomorrow. Juice made with vine-ripened tomatoes from our own greenhouse.", 10);
+
+
+
+  document.getElementById('btnStarters').addEventListener('click', () => {scrollTo('starters')});
+  document.getElementById('btnMains').addEventListener('click', () => {scrollTo('mains')});
+  document.getElementById('btnDesserts').addEventListener('click', () => {scrollTo('desserts')});
+  document.getElementById('btnDrinks').addEventListener('click', () => {scrollTo('drinks')});
+  upBtn();
+
 }
 
 function createCard(title, imageSrc, explanation, price) {
@@ -96,24 +97,6 @@ function createCard(title, imageSrc, explanation, price) {
   card.appendChild(description);
   card.appendChild(value);
   body.appendChild(card);
-
-  document.getElementById('btnStarters').addEventListener('click', () => {
-    document.getElementById('starters').scrollIntoView({behavior: 'smooth'})
-  });
-
-  document.getElementById('btnMains').addEventListener('click', () => {
-    document.getElementById('mains').scrollIntoView({behavior: 'smooth'})
-  });
-
-  document.getElementById('btnDesserts').addEventListener('click', () => {
-    document.getElementById('desserts').scrollIntoView({behavior: 'smooth'})
-  });
-
-  document.getElementById('btnDrinks').addEventListener('click', () => {
-    document.getElementById('drinks').scrollIntoView({behavior: 'smooth'})
-  });
-
-
 }
 
 function createTitle(course) {
@@ -123,7 +106,16 @@ function createTitle(course) {
   body.appendChild(title);
 }
 
+function scrollTo(section) {
+  document.getElementById(`${section}`).scrollIntoView();
+}
 
+function upBtn() {
+  const body = document.getElementById('body');
+  var upBtn = document.createElement('button');
+  upBtn.textContent = "Return to top";
+  body.appendChild(upBtn);
+}
 
 
 export { menu }

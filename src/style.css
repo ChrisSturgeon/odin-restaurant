@@ -51,6 +51,10 @@ table {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, button {
 	font-family: 'myFonts';
 	background-color: #F3F2EE;
