@@ -113,7 +113,9 @@ function scrollTo(section) {
 function upBtn() {
   const body = document.getElementById('body');
   var upBtn = document.createElement('button');
-  upBtn.textContent = "Return to top";
+  upBtn.textContent = "To top";
+  upBtn.addEventListener('click', () => scrollTo('header'));
+  upBtn.classList.add('upBtn');
   body.appendChild(upBtn);
 }
 

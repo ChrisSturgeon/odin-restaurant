@@ -8,7 +8,7 @@ import { contact } from './contact';
 
 
 base();
-menu();
+contact();
 
 // Add Event Listeners
 

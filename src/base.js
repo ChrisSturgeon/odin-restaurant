@@ -7,6 +7,7 @@ function base() {
   // Header
   const header = document.createElement('div');
   header.classList.add('header')
+  header.setAttribute('id', 'header');
 
   // Restaurant title
   const title = document.createElement('h1');
@@ -37,7 +38,8 @@ function base() {
   // Footer
   const footer = document.createElement('div');
   footer.classList.add('footer')
-  footer.textContent = "Footer placeholder text";
+  footer.innerHTML = "Images from <a href='https://unsplash.com/'>Unsplash</a>"
+
 
   // Append Content
   content.appendChild(header);
