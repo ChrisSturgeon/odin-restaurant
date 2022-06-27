@@ -8,8 +8,7 @@ import { contact } from './contact';
 
 
 base();
-menu();
-
+about();
 // Add Event Listeners
 
 const homeBtn = document.getElementById('home');
