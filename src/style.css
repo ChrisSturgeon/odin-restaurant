@@ -44,11 +44,6 @@ table {
 
 /* My CSS */
 
-:root {
-	--accent-color: rgb(27, 187, 27);
-	--shadow: box-shadow: 0px 3px 15px rgba(0,0,0,0.2)
-}
-
 @font-face {
 	font-family: 'Assistant';
 	src: url('./fonts/Assistant-Regular.ttf') format('truetype'),
@@ -61,13 +56,15 @@ table {
 		url('./fonts//Assistant-Bold.ttf') format('truetype');
 }
 
-
 @font-face {
 	font-family: 'AssistantExtraBold';
 	src: url('./fonts/Assistant-ExtraBold.ttf') format('truetype'),
 		url('./fonts//Assistant-ExtraBold.ttf') format('truetype');
 }
 
+:root {
+	--accent-color: rgb(27, 187, 27);
+}
 
 html {
   scroll-behavior: smooth;
@@ -86,7 +83,6 @@ button {
 .content {
   height: 100vh;
   width: 100vw;
-  background-color: white;
 	display: grid;
 	grid-template-rows: 0.5fr 7fr 0.25fr;
 }
@@ -108,7 +104,6 @@ button {
 	background-color: black;
 	font-family: AssistantExtraBold;
 	border: none;
-
 }
 
 .headerBtns {
@@ -120,7 +115,6 @@ button {
 .menuBtn, .menuNav button, .upBtn {
 	font-family: AssistantBold;
 	color: white;
-	font-weight: bold;
 	background-color: black;
 	border: 2px solid black;
 	font-size: 1.2rem;
@@ -139,7 +133,7 @@ button {
 	color: var(--accent-color);
 }
 
-.homeBody, .aboutBody {
+.aboutBody {
 	display: grid;
 	grid-template-rows: auto auto;
 	justify-items: center;
@@ -157,23 +151,12 @@ button {
 	box-shadow: 0px 3px 15px rgba(0,0,0,0.2)
 }
 
-.homeBody{
-	display: flex; 
-	background-color: white;
-	flex-direction: column;
-	align-items: center;
-	justify-content: start;
-	gap: 30px;
-	padding: 40px 15%;
-}
-
 .landingPage {
 	background-image: url('./images/farfalle.jpeg');
 	background-size: cover;
 	background-attachment: fixed;
 	display: grid;
 	grid-template-columns: 1.3fr 2fr;
-
 }
 
 .hero {
@@ -196,17 +179,14 @@ button {
 	color: var(--accent-color);
 }
 
-
 .menuBody, .aboutBody, .contactBody {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
-
 	padding: 30px 25vw;
 	background-color: white;
 }
-
 
 .menuBody {
 	gap: 30px;
@@ -224,26 +204,6 @@ button {
 	padding-bottom: 10px;
 	gap: 15px;
 	margin-top: -20px;
-}
-
-.menuOptions {
-	display: flex;
-	padding: 20px;
-	gap: 10px;
-}
-
-.menuOptions button {
-	font-size: 1.2rem;
-	border: 2px solid #D1CAC2;
-	border-radius: 5px;
-	background-color:#D1CAC2;
-	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-}
-
-.menuOptions button:hover, .upBtn:hover {
-	font-size: 1.2rem;
-	border: 2px solid rgb(95, 81, 81);
-	border-radius: 5px;
 }
 
 .card {
@@ -269,7 +229,6 @@ button {
 	padding: 5px;
 }
 
-
 .food > img {
 	height: 100%;
 	width: 100%;
@@ -286,7 +245,6 @@ h2 {
 	text-align: center;
 	border-radius: 5px;
 	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-	
 }
 
 .upBtn {
@@ -295,17 +253,6 @@ h2 {
 	left: 90vw;
 	border-radius: 5px;
 } 
-
-.nav {
-	position: fixed;
-	top: 30vh;
-	left: 5vw;
-	display: flex;
-	flex-direction: column;
-	padding: 30px;
-	background-color: black;
-
-}
 
 .details {
 	display: grid;
@@ -320,6 +267,9 @@ h2 {
 	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
+.mobileMap {
+	display: none;
+}
 
 .footer {
 	display: flex;
@@ -342,7 +292,6 @@ a:visited {
 
 	.title {
 		font-size: 8vw;
-
 	}
 
 	.landingPage {

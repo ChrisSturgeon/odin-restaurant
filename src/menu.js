@@ -11,18 +11,17 @@ import Coffee from './images/coffee.jpeg';
 import Mint from './images/mint.jpeg';
 import Mary from './images/mary.jpeg';
 
-
+// Creates menu items
 function menu() {
-
   const body = document.getElementById('body');
   body.innerHTML = '';
   body.removeAttribute('class');
 
+  // Create menu navigation buttons
   var menuNav = document.createElement('div');
-  menuNav.classList.add('menuNav');
-  
-  const titles = ['Starters', 'Mains', 'Desserts', 'Drinks'];
+  menuNav.classList.add('menuNav'); 
 
+  const titles = ['Starters', 'Mains', 'Desserts', 'Drinks'];
   for (var title of titles) {
     var btn = document.createElement('button');
     btn.innerText = title;
@@ -30,23 +29,19 @@ function menu() {
     menuNav.appendChild(btn);
   }
 
-  
   body.appendChild(menuNav);
 
-
+  // Create main body of menu content
   var bodyMain = document.createElement('div');
   bodyMain.setAttribute('id', 'bodyMain');
   bodyMain.classList.add('menuBody');
 
-
   body.appendChild(bodyMain);
   
-
   createTitle('starters');
 
   createCard('Armpit Roasted Carrots', Cow, "Armpit Roasted Carrots",
    'All our staff sleep with a carrot in each armpit every night to produce this delicious slow-roasted starter. Garnished with a deconstructed non-gmo orange.', 14);
-  
    createCard('Air-dried bread', Bread, 'Air-dried bread', "We hang this bread in  the alleyway for three weeks before serving to make sure it has our signature 'snap'. Served without butter or water.", 7);
   
   createCard("Nonna's Antipasto (Thursday only)", Pasta, "Nonna's Antipasto", "As part of our outreach intitative, every Thursday we bus in some Italian grandmothers from the nearby nursing home to hand-craft this absoutely scrumpcious dish. Drizzled with a pinenut and basil pesto.", 13)
@@ -75,17 +70,17 @@ function menu() {
 
   createCard('Oh, Bloody Hell Mary!', Mary, 'Oh, Bloody Hell Mary!', "The perfect drink if you're still feeling rough from last night, or fancy feeling awful tomorrow. Juice made with vine-ripened tomatoes from our own greenhouse.", 10);
 
-
-
-
+  // Add event listeners to menu navigation buttons
   document.getElementById('btnStarters').addEventListener('click', () => {scrollTo('starters')});
   document.getElementById('btnMains').addEventListener('click', () => {scrollTo('mains')});
   document.getElementById('btnDesserts').addEventListener('click', () => {scrollTo('desserts')});
   document.getElementById('btnDrinks').addEventListener('click', () => {scrollTo('drinks')});
+  
+  // Add return to top button
   upBtn();
-
 }
 
+// Creates menu item card with title, picture, description and price
 function createCard(title, imageSrc, imgAlt, explanation, price) {
   const bodyMain = document.getElementById('bodyMain');
   const card = document.createElement('div');
@@ -114,6 +109,7 @@ function createCard(title, imageSrc, imgAlt, explanation, price) {
   bodyMain.appendChild(card);
 }
 
+// Creates course divider card.
 function createTitle(course) {
   var title = document.createElement('h2');
   title.textContent = course.slice(0, 1).toUpperCase() + course.slice(1);
@@ -121,10 +117,12 @@ function createTitle(course) {
   bodyMain.appendChild(title);
 }
 
+// Scrolls to given course
 function scrollTo(section) {
   document.getElementById(`${section}`).scrollIntoView();
 }
 
+// Returns view window to top
 function upBtn() {
   const body = document.getElementById('body');
   var upBtn = document.createElement('button');
@@ -133,6 +131,5 @@ function upBtn() {
   upBtn.classList.add('upBtn');
   body.appendChild(upBtn);
 }
-
 
 export { menu }

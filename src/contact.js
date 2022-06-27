@@ -1,5 +1,4 @@
 // Creates about contact body content 
-
 function contact() {
   const body = document.getElementById('body');
   body.innerHTML = '';
@@ -7,17 +6,13 @@ function contact() {
   body.classList.add('contactBody');
   var title = document.createElement('h2');
   title.innerText = "Visit or get in touch"
-
-
   var details = document.createElement('div');
   details.classList.add('details');
 
   // Addresses
-
   var timings = document.createElement('div');
   timings.innerText = "Open 24/7/365 because we've got nothing but time."
-  details.appendChild(timings);
-
+  
   var site = document.createElement('div');
   site.innerHTML = 'Must Eat Grains <br> 13 Undead House <br> Brick Lane <br> London <br> E1 6QL';
   details.appendChild(site);
@@ -45,9 +40,7 @@ function contact() {
   body.appendChild(title);
   body.appendChild(details);
   body.appendChild(map);
-  body.appendChild(mobileMap)
-  
-  
+  body.appendChild(mobileMap);
 }
 
 export { contact }
