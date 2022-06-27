@@ -5,7 +5,7 @@ function contact() {
   body.innerHTML = '';
   body.classList.add('homeBody');
   var title = document.createElement('h2');
-  title.innerText = "Visit or get in touch"
+  title.innerText = "Visit us or get in touch"
 
 
   var details = document.createElement('div');
@@ -23,7 +23,7 @@ function contact() {
 
   // Social Media
 
-  
+
 
   
   

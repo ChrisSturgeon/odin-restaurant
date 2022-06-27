@@ -13,13 +13,13 @@ import Mary from './images/mary.jpeg';
 
 
 function menu() {
+
   const body = document.getElementById('body');
   body.innerHTML = '';
   body.removeAttribute('class');
-  body.classList.add('menuBody')
 
-  const courses = document.createElement('div');
-  courses.classList.add('menuOptions');
+  var menuNav = document.createElement('div');
+  menuNav.classList.add('menuNav');
   
   const titles = ['Starters', 'Mains', 'Desserts', 'Drinks'];
 
@@ -27,9 +27,53 @@ function menu() {
     var btn = document.createElement('button');
     btn.innerText = title;
     btn.setAttribute('id', `btn${title}`);
-    courses.appendChild(btn);
+    menuNav.appendChild(btn);
   }
-  body.appendChild(courses);
+
+  
+  body.appendChild(menuNav);
+
+
+  var bodyMain = document.createElement('div');
+  bodyMain.setAttribute('id', 'bodyMain');
+  bodyMain.classList.add('menuBody');
+
+
+  body.appendChild(bodyMain);
+  
+
+
+  // const courses = document.createElement('div');
+  // courses.classList.add('menuOptions');
+  
+  // const titles = ['Starters', 'Mains', 'Desserts', 'Drinks'];
+
+  // for (var title of titles) {
+  //   var btn = document.createElement('button');
+  //   btn.innerText = title;
+  //   btn.setAttribute('id', `btn${title}`);
+  //   courses.appendChild(btn);
+  // }
+  // body.appendChild(courses);
+
+  // var nav = document.createElement('div');
+  // nav.classList.add('nav');
+
+  // const titles = ['Starters', 'Mains', 'Desserts', 'Drinks'];
+
+  // for (var title of titles) {
+  //   var btn = document.createElement('button');
+  //   btn.innerText = title;
+  //   btn.setAttribute('id', `btn${title}`);
+  //   nav.appendChild(btn);
+  // }
+
+  // body.appendChild(nav);
+
+
+
+
+
 
   createTitle('starters');
 
@@ -40,7 +84,7 @@ function menu() {
   
   createTitle('mains');
 
-  createCard('Vegetable Fiesta', Icon, "The dish that started it all. Grown by mute monks, these vegetables have been regularly blessed to ensure they're bursting with flavour.", 15);
+  createCard('Vegetable Fiesta', Icon, "The dish that started it all. Grown by mute monks, these vegetables have been regularly blessed to ensure their flavour speaks volumes.", 15);
 
   createCard('Tasty Tofu', Tofu, "Think tofu is proper rank? You won't after this! All the soy beans are harvested from a single plant on the Altiplano plains in Peru to create the most delicate, uniform texture.", 14);
 
@@ -52,7 +96,7 @@ function menu() {
 
   createCard('Moose mousse blocks', Moose, "Rescued heritage-breed moose/meese/mooses are used to power our vegan-cream-whipping-machine&#8482. We then mix the cream with dessicated strawberries before it's flash-frozen to produce these delectable, fruity blocks.", 11)
 
-  createCard('Vegan Brownies', Brownies, "Since amendment 12.8 to the 1979 UK Statue on Restaurant Puddings every restaurant establishment has been required by law to offer brownies for dessert - no matter how dry and uninspired they are. Here's our vegan version.", 10);
+  createCard('Vegan Brownies', Brownies, "Since amendment 12.8 to the 1979 UK Statue on Restaurant Puddings every food establishment has been required by law to offer brownies for dessert - no matter how dry and uninspired they are. Here's our vegan version.", 10);
 
   createTitle('drinks');
 
@@ -61,6 +105,7 @@ function menu() {
   createCard('Minty Mule', Mint, "Brimmed with organic toilet-tequila from the local prison this mule packs a minty punch. Served in a glass jar with a bio-degradeable sweetcorn straw to justify the price.", 9);
 
   createCard('Oh, Bloody Hell Mary!', Mary, "The perfect drink if you're still feeling rough from last night, or fancy feeling awful tomorrow. Juice made with vine-ripened tomatoes from our own greenhouse.", 10);
+
 
 
 
@@ -73,7 +118,7 @@ function menu() {
 }
 
 function createCard(title, imageSrc, explanation, price) {
-  const body = document.getElementById('body');
+  const bodyMain = document.getElementById('bodyMain');
   const card = document.createElement('div');
   card.classList.add('card');
 
@@ -96,14 +141,14 @@ function createCard(title, imageSrc, explanation, price) {
   card.appendChild(picture);
   card.appendChild(description);
   card.appendChild(value);
-  body.appendChild(card);
+  bodyMain.appendChild(card);
 }
 
 function createTitle(course) {
   var title = document.createElement('h2');
   title.textContent = course.slice(0, 1).toUpperCase() + course.slice(1);
   title.setAttribute('Id', `${course}`);
-  body.appendChild(title);
+  bodyMain.appendChild(title);
 }
 
 function scrollTo(section) {

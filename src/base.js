@@ -1,5 +1,7 @@
 // Creates home page
 
+import { home } from './home.js';
+
 function base() {
   const content = document.getElementById('content');
   content.classList.add('content');
@@ -10,26 +12,28 @@ function base() {
   header.setAttribute('id', 'header');
 
   // Restaurant title
-  const title = document.createElement('h1');
+  const title = document.createElement('button');
   title.classList.add('title');
+  title.addEventListener('click', home);
   title.textContent = 'Must Eat Grains';
   header.appendChild(title);
 
 
   // Header menu
-  const headerMenu = document.createElement('div');
-  headerMenu.classList.add('headerMenu');
-  const menuItems = ['home', 'menu', 'about', 'contact'];
+  const headerBtns = document.createElement('div');
+
+  headerBtns.classList.add('headerBtns');
+  const menuItems = ['home', 'about', 'menu', 'contact'];
 
   for (var item of menuItems) {
     var option = document.createElement('button');
     option.textContent = item.slice(0, 1).toUpperCase() + item.slice(1);
     option.setAttribute('id', `${item}`);
     option.classList.add('menuBtn');
-    headerMenu.appendChild(option);
+    headerBtns.appendChild(option);
   }
 
-  header.appendChild(headerMenu);
+  header.appendChild(headerBtns);
 
   // Body 
   const body = document.createElement('div');
