@@ -43,7 +43,7 @@ function base() {
   const footer = document.createElement('div');
   footer.classList.add('footer')
   footer.setAttribute('id', 'footer')
-  footer.innerHTML = "Images:<a href='https://unsplash.com/'> Unsplash</a>"
+  footer.innerHTML = "<a href='https://unsplash.com/'> Images from Unsplash</a>"
 
 
   // Append Content
