@@ -23,7 +23,7 @@ function contact() {
   details.appendChild(telephone);
 
   var email = document.createElement('div');
-  email.innerHTML = "Ping us an <a href='mailto:must...eat...grains@gmail.com'>email</a>"
+  email.innerHTML = "Send us an <a href='mailto:must...eat...grains@gmail.com'>email</a>"
   details.appendChild(email);
 
   var youtube = document.createElement('div');
