@@ -1,4 +1,4 @@
-The Restaurant Page project from The Odin Project:
+The Restaurant Page project from The Odin Project.
 
 Live link: https://kungfucabbage.github.io/odin-restaurant/
 
